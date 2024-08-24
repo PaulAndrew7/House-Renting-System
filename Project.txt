@@ -1,0 +1,83 @@
++----------------------------------+
+|             User                 |
++----------------------------------+
+|				                   |
+| -username: String                |
+| -password: String                |
+| -email: String                   |
++----------------------------------+
+| +login(): boolean                |
+| +logout(): void                  |
++----------------------------------+
+               |
+               | 1
+               |
++----------------------------------+
+|           Owner                  |
++----------------------------------+
+| -properties: List<Property>      |
++----------------------------------+
+| +addProperty(property: Property):|
+| +updateProperty(property: Property):|
+| +deleteProperty(property: Property):|
++----------------------------------+
+               |
+               | 1
+               |
++----------------------------------+
+|          Admin                   |
++----------------------------------+
+| +manageUsers(): void             |
+| +manageProperties(): void        |
++----------------------------------+
+               |
+               | 1
+               |
++----------------------------------+
+|         Customer                 |
++----------------------------------+
+| -favorites: List<Property>       |
++----------------------------------+
+| +searchProperty(criteria: SearchCriteria): List<Property>|
+| +sendInquiry(property: Property): void |
+| +bookProperty(property: Property): void|
++----------------------------------+
+               |
+               | 1
+               |
++----------------------------------+
+|         Property                 |
++----------------------------------+
+| -propertyId: int                 |
+| -owner: Owner                    |
+| -location: String                |
+| -numRooms: int                   |
+| -rent: double                    |
+| 						           |
++----------------------------------+
+| +getPropertyDetails(): String    |
++----------------------------------+
+
++----------------------------------+
+|       SearchCriteria             |
++----------------------------------+
+| -location: String                |
+| -numRooms: int                   |
+| -maxRent: double                 |
++----------------------------------+
+
++----------------------------------+
+|       AuthenticationException    |
++----------------------------------+
+| -message: String                 |
++----------------------------------+
+| +getMessage(): String            |
++----------------------------------+
+
++----------------------------------+
+|       PropertyException          |
++----------------------------------+
+| -message: String                 |
++----------------------------------+
+| +getMessage(): String            |
++----------------------------------+
